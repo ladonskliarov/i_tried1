@@ -1,0 +1,29 @@
+@use 'variables/_layout_sizes';
+@use 'variables/dimensions';
+
+@use 'abstract/_colors' as *;
+@use 'abstract/_fonts';
+@use 'abstract/_abstract';
+
+@use 'layout/_layout';
+
+@use 'mixins/_mixin_responsive' as *;
+
+@use 'components/_cta_button';
+@use 'components/_game_card';
+@use 'components/_review_card';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+    color: $text-color;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    color: $text-color;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-decoration-line: none;
+}

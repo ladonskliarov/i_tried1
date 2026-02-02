@@ -1,0 +1,47 @@
+@use '../abstract/_abstract' as *;
+@use '../variables/_layout_sizes' as *;
+@use '../mixins/_mixin_responsive' as *;
+
+.cta-button {
+    background-color: $accent-color;
+    padding-left: 24px;
+    border-radius: 20px;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 40px;
+    align-self: end;
+    padding-right: 10px;
+    width: 144px;
+    height: 70px;
+
+    @include responsive('tablet-portrait') {
+        width: 204px;
+        height: 104px;
+        align-self: start;
+        border-radius: 30px;
+    }
+
+    @include responsive('tablet-landscape') {
+        width: 238px;
+        height: 121px;
+        align-self: start;
+        border-radius: 30px;
+    }
+
+    @include responsive('desktop') {
+        width: 252px;
+        height: 126px;
+        align-self: start;
+        border-radius: 30px;
+    }
+}
+
+.cta-button img {
+    width: 100%;
+    height: auto;
+}
+
+footer .cta-button {
+    align-self: center;
+    margin-right: 0px;
+}

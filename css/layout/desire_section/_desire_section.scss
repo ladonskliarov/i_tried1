@@ -1,0 +1,80 @@
+@use '../../mixins/_mixin_responsive' as *;
+@use '../../variables/_dimensions' as *;
+@use '../../abstract/_colors' as *;
+
+.desire-section {
+    width: 100%;
+    background-color: $desire-section;
+    padding: $content-padding-vertical $content-padding-horizontal;
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 24px;
+    align-items: center;
+    flex-direction: column;
+
+    @include responsive('tablet-portrait') {
+        padding: $content-padding-vertical+100px $content-padding-horizontal;
+    }
+
+    @include responsive('tablet-landscape') {
+        padding: $content-padding-vertical+120px $content-padding-horizontal;
+    }
+
+    @include responsive('desktop') {
+        padding: $content-padding-vertical+180px $content-padding-horizontal;
+    }
+}
+
+.desire-section p {
+    @include responsive('tablet-portrait') {
+        display: none;
+    }
+
+    @include responsive('tablet-landscape') {
+        display: none;
+    }
+
+    @include responsive('desktop') {
+        display: none;
+    }
+}
+
+#reviews_vertical {
+    display: block;
+
+    @include responsive('tablet-portrait') {
+        display: none;
+    }
+
+    @include responsive('tablet-landscape') {
+        display: none;
+    }
+
+    @include responsive('desktop') {
+        display: none;
+    }
+}
+
+#reviews_horizontal {
+    display: none;
+
+    @include responsive('tablet-portrait') {
+        display: block;
+        height: 100%;
+        width: 70%;
+    }
+
+    @include responsive('tablet-landscape') {
+        display: block;
+        height: 100%;
+        width: 70%;
+    }
+
+    @include responsive('desktop') {
+        display: block;
+        height: 100%;
+        width: 70%;
+    }
+}

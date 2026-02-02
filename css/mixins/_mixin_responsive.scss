@@ -1,0 +1,10 @@
+@use '../variables/_layout_sizes' as *;
+@use 'sass:map';
+
+@mixin responsive($size) {
+    $width: map.get($breakpoints, $size);
+
+    @media (min-width: $width) {
+        @content;
+    }
+}

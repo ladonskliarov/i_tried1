@@ -1,0 +1,9 @@
+$tablet-portrait: 768px;
+$tablet-landscape: 1024px;
+$desktop: 1440px;
+
+$breakpoints: (
+    'tablet-portrait': $tablet-portrait,
+    'tablet-landscape': $tablet-landscape,
+    'desktop': $desktop
+);

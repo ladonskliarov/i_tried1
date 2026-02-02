@@ -1,0 +1,34 @@
+@use '../../mixins/_mixin_responsive' as *;
+@use '../../abstract/_abstract' as *;
+@use '../../variables/_dimensions' as *;
+
+.intro-section-content {
+    width: 100%;
+    height: auto;
+    background: url('../images/hero_bg.png');
+    padding: $content-padding-vertical $content-padding-horizontal;
+    padding-bottom: 80px;
+    background-color: $primary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include responsive('tablet-portrait') {
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-top: 28px;
+    }
+
+    @include responsive('tablet-landscape') {
+        padding-left: 26px;
+        padding-right: 26px;
+        padding-top: 22px;
+    }
+
+    @include responsive('desktop') {
+        padding-left: 135px;
+        padding-right: 135px;
+        padding-top: 38px;
+    }
+}
+
