@@ -1,0 +1,36 @@
+@use '_theme.scss' as *;
+@use '_layout.scss' as *;
+
+.btn {
+    max-width: 144px;
+    max-height: 72px;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 6px 10px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include responsive('tablet-portrait') {
+        border-radius: 30px;
+        max-width: 204px;
+        max-height: 104px;
+        padding: 12px 24px;
+    }
+
+    @include responsive('tablet-landscape') {
+        max-width: 238px;
+        max-height: 122px;
+    }
+
+    @include responsive('desktop') {
+        max-width: 252px;
+        max-height: 126px;
+    }
+}
