@@ -18,19 +18,40 @@
     }
 
     @include responsive('tablet-portrait') {
-        border-radius: 30px;
-        max-width: 204px;
-        max-height: 104px;
+        // border-radius: 30px;
+        max-width: none;
+        max-height: none;
+        width: 204px;
+        height: 104px;
         padding: 12px 24px;
     }
 
     @include responsive('tablet-landscape') {
-        max-width: 238px;
-        max-height: 122px;
+        width: 238px;
+        height: 122px;
     }
 
     @include responsive('desktop') {
-        max-width: 252px;
-        max-height: 126px;
+        width: 252px;
+        height: 126px;
+    }
+}
+
+.main__logo {
+    display: flex;
+    height: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 18px;
+
+    img {
+        height: 32px;
+    }
+
+    @include responsive('tablet-portrait') {
+        display: none;
     }
 }

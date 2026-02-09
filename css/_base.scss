@@ -1,26 +1,44 @@
 @use '_theme.scss' as *;
 @use '_layout.scss' as *;
 
-html, body {
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
+    background-color: $primary-color;
+}
+
+main {
+    flex: 1;
+    margin-top: -100px;
+
+    @include responsive ('tablet-portrait') {
+        // margin-top: 0;
+    }
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    box-sizing: border-box;
     color: $text-color;
 }
 
-img, video {
+img,
+video {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2,
+h3 {
     line-height: 1.5;
     font-family: $font-accent;
     font-weight: bold;
@@ -31,4 +49,8 @@ a {
     color: $text-color;
     font-family: 'Rubik Mono One', sans-serif;
     text-decoration: none;
+}
+
+li {
+    font-family: 'Rubik Mono One', sans-serif;
 }
